@@ -20,7 +20,9 @@ body{
     justify-content: center;
     height: fit-content;
 }
-
+#stickman{
+    
+} 
 #letras{
     display: flex;
     justify-content: flex-start;

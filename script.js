@@ -13,6 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var jugador2_L = 0
     var adivinanzas = 0  
     var turno = 0
+    function cambiar_muneco(intentos){
+        if (intentos>0){
+            var imagen=document.getElementById("stickman")
+            imagen.src="imagenes/Ahorcado"+intentos+".PNG"
+        } 
+        
+        
+    }
+
+    
+    
+    
     document.getElementById("jugador1").innerHTML = "<td>"+jugador1+"</td><td>"+jugador1_P+"</td><td>"+jugador1_W+"</td><td>"+jugador1_L+"</td>"
     document.getElementById("jugador2").innerHTML = "<td>"+jugador2+"</td><td>"+jugador1_P+"</td><td>"+jugador1_W+"</td><td>"+jugador1_L+"</td>"
     function valores(){
@@ -45,6 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
         adivinanzas = 0 
         turno =0
         valores()
+     
+           
+
+        
+      
+  
     });
     
     
@@ -86,9 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (encontro <1){
             let acierto = document.getElementById("aciertos")
             acierto.style.color = "red"
-            acierto.innerHTML = "AYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+            acierto.innerHTML = "AYYYYYYYYYYYYY"
             intentos -=1
-        
+            cambiar_muneco(intentos)
+           
         }else{ //sino en verde
             let acierto = document.getElementById("aciertos")
             acierto.style.color = "green"
@@ -99,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (intentos<=0){
             quejugadorgano(jugador,adivinanzas,-1)
             alert(jugador +" es el perdedor, La palabra era: \n" +palabraMain);
+            
 
         }//cuenta los aciertos faltantes
         else if (adivinanzas>=tamañoP){
@@ -106,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert("GANASTE "+jugador+"\nPalabra: "+palabraMain)
         }//actualiza el contador de intentos
         document.getElementById("intentos").innerText = "intentos restantes: "+intentos;
+       
 
     }
     
@@ -115,7 +136,9 @@ document.addEventListener('DOMContentLoaded', function() {
         intentos = 6
         tamañoP = 0
         adivinanzas = 0  
+        
         palabraMain = prompt("Coloque la palabra para que "+jugador+" la adivine:\n")
+        cambiar_muneco(intentos)
         valores()
         //toma los valores de las letras a y z
         var i = "a".charCodeAt(0), j = "z".charCodeAt(0);
