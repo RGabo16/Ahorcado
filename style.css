@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
+    background-color: black;
 }
 
 #titulo{
@@ -8,18 +9,14 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 2.Sem;
-    background-color: rgb(38, 216, 61);
+    background-color: rgb(221, 240, 52);
     height: 20vh;
-}
-
-main{
-
 }
 
 #muneco{
     display: flex;
     justify-content: flex-start;
-    background-color: rgb(54, 174, 243);
+    background-color: #ffffff;
     justify-content: center;
     height: fit-content;
 }
@@ -27,48 +24,74 @@ main{
 #letras{
     display: flex;
     justify-content: flex-start;
-    background-color: rgb(72, 172, 253);
+    background-color: #333333;
     justify-content: center;
     height: fit-content;
     flex-wrap: wrap;
     
 }
-#jugar{
+.jugar{
     display: flex;
     justify-content: flex-start;
-    margin-left: 30px;
+    margin-left: 30%;
     justify-content: center;
- 
 }
 
-#jugar button{
+#jugar{
     bottom: auto;
     width: 80px;
     text-align: center;
     font-size:larger;
+    border-radius: 20px;
     width: fit-content;
-        
-    
+    background-color: rgb(0, 123, 255);
+    transition: background-color 0.3s ease;
+}
+#jugar:hover{
+    background-color: rgb(41, 226, 250);
+    cursor: pointer;
 }
 #letras button{
     margin: 10px;
     width: 40px;
     text-align: center;
     font-size: 2em;
-    
+    border-radius: 5px;
+    cursor: pointer;
+}
+.respuesta{
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    width:auto;
+    text-align: left;
+    font-size:larger;
+    width: fit-content;
 }
 
+
 #palabra span{
+    display: flex;
+    align-items:center;
+    font-size: 2em;
+    margin-left: 20px;
+    border-bottom:2px solid rgb(0, 0, 0);
+    color: transparent;
+    display: inline-block;
+    width: 20px;
+    vertical-align: bottom;
+    user-select: none;
+}
+#palabra div{
     display: flex;
     align-items:end;
     font-size: 2em;
     margin-left: 20px;
-    border-bottom:2px solid black;
     display: inline-block;
     width: 20px;
     vertical-align: bottom;
+    user-select: none;
 }
-
 #piso{
     
     background-color: rgb(221, 240, 52);
@@ -82,10 +105,73 @@ main{
     justify-content: center;
     height: fit-content;
 }
-#btn{
+.btn{
     display: flex;
     justify-content: center;
     height: fit-content;
+    font-weight: bold;
+}
+#reinicio{
+    bottom: auto;
+    text-align: center;
+    width: fit-content;
+    border-radius: 4px;
+    background-color: coral;
+    transition: background-color 0.3s ease;
+}
+#reinicio:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+#cerrar{
+    bottom: auto;
+    text-align: center;
+    width: fit-content;
+    border-radius: 4px;
+    background-color: coral;
+    transition: background-color 0.3s ease;
+}
+#cerrar:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+#resultados{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(54, 174, 243);
+    justify-content: center;
+    height: fit-content;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-weight: bold;
+}
+
+table th,
+table td {
+    padding: 1em;
+    text-align: center;
+    height: auto;
+    white-space: normal;
+    font-size: 14px; /* Tamaño de fuente predeterminado */
+    word-break: break-word; /* Salto de línea automático para palabras largas */
+}
+
+
+table th {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+table td {
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 #resultados{
     display: flex;
