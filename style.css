@@ -30,6 +30,7 @@ main{
     background-color: rgb(72, 172, 253);
     justify-content: center;
     height: fit-content;
+    flex-wrap: wrap;
     
 }
 #jugar{
@@ -83,6 +84,15 @@ main{
 }
 #btn{
     display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+#resultados{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(54, 174, 243);
     justify-content: center;
     height: fit-content;
 }
