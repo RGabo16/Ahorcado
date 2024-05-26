@@ -20,9 +20,9 @@ body{
     justify-content: center;
     height: fit-content;
 }
-#stickman{
+
     
-} 
+
 #letras{
     display: flex;
     justify-content: flex-start;
@@ -93,6 +93,10 @@ body{
     width: 20px;
     vertical-align: bottom;
     user-select: none;
+}
+#stickman{
+    display: flex;
+    align-items: end;
 }
 #piso{
     
