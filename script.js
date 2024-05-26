@@ -129,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
         palabraMain = prompt("Coloque la palabra para que "+jugador+" la adivine:\n")
         cambiar_muneco(intentos)
         valores()
+        document.getElementById("intentos").innerText = "intentos restantes: "+intentos;
+        document.getElementById("aciertos").innerHTML = ""
         //toma los valores de las letras a y z
         var i = "a".charCodeAt(0), j = "z".charCodeAt(0);
         //elimina las letras ya usadas
