@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego del Ahorcado</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
    
@@ -16,74 +17,53 @@
     <div id="muneco">
         <div>
             <!-- Aqui va el muneco-->
-            <img src="imagenes/avatars-LrV8voHTqB32jnW9-HzmABw-t240x240.jpg" alt="stickman">
+            <img src="imagenes/avatars-LrV8voHTqB32jnW9-HzmABw-t240x240.jpg" id="stickman" alt="">
         </div>
         <div>
             <p id="palabra">
-                <span>H</span>
-                <span></span>
-                <span>L</span>
-                <span>A</span>
                 
             </p>
-            <div id="jugar">
-                <button >
+            <div class="jugar">
+                <button id="jugar">
                     Empezar Juego
                 </button>
+            </div>
+            <div class="respuesta">
+                <h2 id="intentos">intentos restantes: 6</h2>
+                <h2 id="aciertos"></h2>
             </div>
         </div>
        
     </div>
     
     <div id="letras">
-        <button>a</button>
-        <button>b</button>
-        <button>c</button>
-        <button>d</button>
-        <button>e</button>
-        <button>f</button>
-        <button>g</button>
-        <button>h</button>
-        <button>i</button>
-        <button>j</button>
-        <button>k</button>
-        <button>l</button>
-        <button>m</button>
-        <button>n</button>
-        <button>ñ</button>
-        <button>o</button>
-        <button>p</button>
-        <button>q</button>
-        <button>r</button>
-        <button>s</button>
-        <button>t</button>
-        <button>u</button>
-        <button>v</button>
-        <button>x</button>
-        <button>y</button>
-        <button>z</button>
 
     </div>
     <div id="piso">
         <div>
             <p id="msg"> Ganaste/Perdiste</p>
-<<<<<<< Updated upstream
-=======
+
             <!-- Tabla de Resultados -->
-            <Table id="resultados">
+            <Table id="Resultados">
+
+
                 <tr>
                     <td>Jugador</td> 
                     <td>Puntaje</td>
                     <td>Victorias</td>
                     <td>Derrotas</td>
                 </tr>
-                <tr>
+
+                <tr id="jugador1">
+
                     <td>1</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
-                <tr>
+
+                <tr id="jugador2">
+
                     <td>2</td>
                     <td>0</td>
                     <td>0</td>
@@ -91,19 +71,18 @@
                 </tr>
             </Table>
 
->>>>>>> Stashed changes
         </div>
-        <div id="btn">
-            <button>
+        <div class="btn">
+            <button id="reinicio">
                 Reiniciar
             </button>
-            <button>
+            <button id="cerrar">
                 Cerrar
             </button>
         </div>
-   </main>
+    
+    </main>
     </div>
-
 
 </body>
 </html>
