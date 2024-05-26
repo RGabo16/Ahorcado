@@ -19,10 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function valores(){
         tamañoP =0
         if (palabraMain !=null || palabraMain !=""){
+            //toma cada valor de la palabra por separado
             for (x in palabraMain){
-                if(palabraMain[x] != " "){
+                if(palabraMain[x] != " " && isNaN(palabraMain[x])){
                     tamañoP+=1
-                }
+                    
+                }                
             }
         }
     }
@@ -180,6 +182,9 @@ document.addEventListener('DOMContentLoaded', function() {
             //sustituye los espacios por "/"
             if (letre == " "){
                 palabra.innerHTML +="<div>/</div>"}
+            //agrega los numeros 
+            else if (!isNaN(letre)){
+                palabra.innerHTML +="<div>"+letre+"</div>"}
             else{
                 palabra.innerHTML +="<span id="+ letre.toLowerCase() +">"+ letre.toUpperCase() +"</span>";}
         }

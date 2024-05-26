@@ -129,18 +129,6 @@ body{
     background-color: aquamarine;
     cursor: pointer;
 }
-#cerrar{
-    bottom: auto;
-    text-align: center;
-    width: fit-content;
-    border-radius: 4px;
-    background-color: coral;
-    transition: background-color 0.3s ease;
-}
-#cerrar:hover{
-    background-color: aquamarine;
-    cursor: pointer;
-}
 #resultados{
     display: flex;
     justify-content: center;
