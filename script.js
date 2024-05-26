@@ -13,18 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var jugador2_L = 0
     var adivinanzas = 0  
     var turno = 0
-    function cambiar_muneco(intentos){
-        if (intentos>0){
-            var imagen=document.getElementById("stickman")
-            imagen.src="imagenes/Ahorcado"+intentos+".PNG"
-        } 
-        
-        
-    }
 
-    
-    
-    
     document.getElementById("jugador1").innerHTML = "<td>"+jugador1+"</td><td>"+jugador1_P+"</td><td>"+jugador1_W+"</td><td>"+jugador1_L+"</td>"
     document.getElementById("jugador2").innerHTML = "<td>"+jugador2+"</td><td>"+jugador1_P+"</td><td>"+jugador1_W+"</td><td>"+jugador1_L+"</td>"
     function valores(){
@@ -57,14 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
         adivinanzas = 0 
         turno =0
         valores()
-     
-           
-
-        
-      
-  
-    });
     
+    });
+    function cambiar_muneco(intentos){
+        if (intentos>0){
+            var imagen=document.getElementById("stickman")
+            imagen.src="imagenes/Ahorcado"+intentos+".PNG"
+        }   
+    }
     
 
 
